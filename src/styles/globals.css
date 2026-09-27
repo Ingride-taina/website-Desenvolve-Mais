@@ -1,0 +1,33 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+.card-virar {
+  perspective: 1000px;
+}
+
+.card-virar-interno {
+  transition: transform 0.7s;
+  transform-style: preserve-3d;
+}
+
+.card-virado .card-virar-interno {
+  transform: rotateY(180deg);
+}
+
+.card-frente,
+.card-verso {
+  backface-visibility: hidden;
+}
+
+.card-verso {
+  transform: rotateY(180deg);
+}
